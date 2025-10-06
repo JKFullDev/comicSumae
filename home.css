@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav {
+    padding-left: 100px;
+    padding-right: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-image: url("https://img.freepik.com/premium-vector/comic-style-background-design-element-poster-card-banner-comic-book-flyer_142438-685.jpg");
+    background-size: contain;
+}
+
+
+nav img {
+    width: 200px;
+    height: fit-content;
+}
+
+nav button {
+    padding: 10px;
+    width: 190px;
+    height: 40px;
+}
+
+body {
+    background-color: rgba(60, 128, 255, 0.507);
+}
+
+#buscar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#buscar input {
+    width: 500px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 20px;
+    margin-top: 100px
+}
+
+#masGustados {
+    margin-top: 100px
+}
+
+#masGustados ul {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    list-style: none;
+    align-self: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#masGustados img {
+    width: 200px;
+}
+
+#cuadroBusqueda {
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.425);
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+#cuadroBusqueda button {
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    font-size: x-large;
+}
+
+#cuadroBusqueda ul {
+    list-style: none;
+    text-align: center;
+}
+
+#cuadroBusqueda li {
+    margin-top: 30px;
+}
+
+#cuadroBusqueda input {
+    width: 500px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+#cuadroBusqueda img {
+    width: 100px;
+}

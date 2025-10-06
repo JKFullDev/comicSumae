@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="home.css">
+    <script src="main.js" defer></script>
+    <title>COMICSUMAE - Mi biblioteca</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div>
+                <img src="https://cdn.mos.cms.futurecdn.net/JJYwsGnrnvWAwKo3MwwgFd.jpg" alt="logo"
+                    onclick="location.href = './Home.html'">
+            </div>
+            <div>
+                <button onclick="location.href = './biblioteca.html'">Área personal</button>
+            </div>
+        </nav>
+    </header>
+    <h1>Mi Biblioteca</h1>
+
+    <form id="form-comic">
+        <input type="text" placeholder="Titulo" id="titulo" required>
+        <input type="text" placeholder="Editorial" id="editorial" required>
+        <input type="text" placeholder="Url de la portada" id="portada" required>
+        <input type="number" placeholder="Año" id="año" required>
+        <input type="hidden" id="id">
+        <button type="submit" id="submitBtn">Añadir comic</button>
+    </form>
+
+    <ul id="comics-container">
+
+    </ul>
+
+</body>
+
+</html>
