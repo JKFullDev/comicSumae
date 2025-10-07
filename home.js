@@ -5,8 +5,8 @@ barraBusqueda.addEventListener("click", () => {
     const cuadroBusqueda = document.createElement("div");
     cuadroBusqueda.id = "cuadroBusqueda";
     cuadroBusqueda.innerHTML = `
-    <div>
-        <input id="barraBusqueda" type="text" placeholder="Busca">
+    <div  id="barraBusqueda"> 
+        <input type="text" placeholder="Busca">
         <button onclick="location.href = './home.html'">X</button>
     </div>
     <ul>

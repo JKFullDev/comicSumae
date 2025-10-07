@@ -1,0 +1,121 @@
+// JSON de los cómics
+        const comicsData = {
+            "comics": [
+                {
+                    "id": "72569e4c-f6cb-471e-9569-e28a137e2c62",
+                    "titulo": "Marvel Defenders",
+                    "editorial": "Marvel",
+                    "year": "1992",
+                    "cover": "https://tse4.mm.bing.net/th/id/OIP.wPlpoQJVFFoAKxRXnIEOtAHaLH?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3"
+                },
+                {
+                    "id": "1fe9e103-f08a-4e53-a2ce-834ebfe14343",
+                    "titulo": "Secret Wars",
+                    "editorial": "Marvel",
+                    "year": "1981",
+                    "cover": "https://th.bing.com/th/id/R.357e8bd6a7ea63b8697c590fa45a8c4c?rik=SAVJd08S%2bs4kXw&pid=ImgRaw&r=0"
+                },
+                {
+                    "id": "017c5319-ef8d-4bc3-b270-68ff1b964a07",
+                    "titulo": "The Dark Knight",
+                    "editorial": "DC Comics",
+                    "year": "1985",
+                    "cover": "https://static1.srcdn.com/wordpress/wp-content/uploads/2023/04/batman-423-dc-comics.jpg"
+                },
+                {
+                    "id": "ed23ecb5-e185-4481-8145-216583aaacc0",
+                    "titulo": "The Incredible Hulk",
+                    "editorial": "Marvel Comics ",
+                    "year": "1975",
+                    "cover": "https://www.adazing.com/wp-content/uploads/2023/06/Marvel-Comic-Book-Covers-Incredible-Hulk-Vol-1-601-70th-Frame-Variant.jpg"
+                },
+                {
+                    "id": "ee85e76a-837c-4a42-bdf4-39f80b55105f",
+                    "titulo": "Tales of Teen TItans",
+                    "editorial": "DC Comics",
+                    "year": "1987",
+                    "cover": "https://th.bing.com/th/id/R.9ec7128870510ac0341ec7124735d124?rik=6guQJ5YkbfjORQ&pid=ImgRaw&r=0"
+                },
+                {
+                    "id": "8ca3f313-024c-47f1-8ea0-ccb1d743c0c5",
+                    "titulo": "Shazam!",
+                    "editorial": "DC Comics",
+                    "year": "1981",
+                    "cover": "https://tse2.mm.bing.net/th/id/OIP.hmWZW7aZqdnEnzFtiwSWEgHaLU?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3"
+                },
+                {
+                    "id": "65d33dbe-f2a9-4b41-9af6-6b057f68201e",
+                    "titulo": "Black Panther",
+                    "editorial": "Marvel Comics ",
+                    "year": "1998",
+                    "cover": "https://2.bp.blogspot.com/-Ld8zeeq5vSk/XZDim2wrlCI/AAAAAAABL64/-_O9xQ5mXdgJLj_SoCKXjVqjCGZzNqJUQCNcBGAsYHQ/s1600/STL110627.jpeg"
+                },
+                {
+                    "id": "393df981-9082-4ef3-9242-3df86b027cc0",
+                    "titulo": "Deadpool",
+                    "editorial": "Marvel Comics ",
+                    "year": "1992",
+                    "cover": "https://th.bing.com/th/id/R.06bab56d4a4089580b6ef70e3571f5eb?rik=a7NOUVp5ipzb5w&pid=ImgRaw&r=0"
+                },
+                {
+                    "id": "f052ae20-1e70-4d59-a38f-2076476d85b7",
+                    "titulo": "Superman",
+                    "editorial": "Marvel Comics ",
+                    "year": "2001",
+                    "cover": "https://comichub.blob.core.windows.net/low/703cd0f8-e7c6-4385-afd5-84f278dfa428.jpg"
+                },
+                {
+                    "id": "a9a3c33f-0112-4f70-8c8e-bf5d49dc8cc2",
+                    "titulo": "Daredevil",
+                    "editorial": "DC Comics",
+                    "year": "1975",
+                    "cover": "https://th.bing.com/th/id/R.7985ecaa6588496e1821d60b71bf30ff?rik=tWrctPRbiMUmQg&pid=ImgRaw&r=0"
+                }
+            ]
+        };
+
+        // Obtener el contenedor donde se mostrarán los cómics
+        const comicsContainer = document.querySelector('#other-user-container');
+
+        // Función para renderizar los cómics
+        function displayComics(comics) {
+            comics.forEach(comic => {
+                // Crear un div para cada cómic
+                const comicCard = document.createElement('div');
+                comicCard.classList.add('comic-card');
+
+                // Crear elementos para los datos del cómic
+                const comicImage = document.createElement('img');
+                comicImage.src = comic.cover;
+                comicImage.alt = comic.titulo;
+
+                const comicTitle = document.createElement('h3');
+                comicTitle.textContent = comic.titulo;
+
+                const comicEditorial = document.createElement('p');
+                comicEditorial.textContent = `Editorial: ${comic.editorial}`;
+
+                const comicYear = document.createElement('p');
+                comicYear.textContent = `Año: ${comic.year}`;
+
+                // Crear un botón
+                const comicButton = document.createElement('button');
+                comicButton.textContent = 'Ver más';
+                comicButton.addEventListener('click', () => {
+                    alert(`Cargando página de comic ${comic.titulo}...`);
+                });
+
+                // Agregar los elementos al div de la tarjeta
+                comicCard.appendChild(comicImage);
+                comicCard.appendChild(comicTitle);
+                comicCard.appendChild(comicEditorial);
+                comicCard.appendChild(comicYear);
+                comicCard.appendChild(comicButton);
+
+                // Agregar la tarjeta al contenedor
+                comicsContainer.appendChild(comicCard);
+            });
+        }
+
+        // Llamar a la función para mostrar los cómics
+        displayComics(comicsData.comics);

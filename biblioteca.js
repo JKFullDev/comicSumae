@@ -7,14 +7,32 @@ let modoEdicion = false;
 
 const crearComic = (comic) => {
     const li = document.createElement("li");
+    li.id = "comic-card"
     li.innerHTML = `
-        <h2>${comic.editorial} - ${comic.titulo}</h2>
+        <h2>${comic.titulo}</h2>
+        <h3>${comic.editorial}</h3>
         <img src="${comic.cover}" alt="${comic.editorial} - ${comic.titulo}">
         <p>${comic.year}</p>
     `;
+    //Creamos boton de editar
+    const editBtn = document.createElement("button");
+    editBtn.textContent = "Editar comic";
+    editBtn.id = "editBtn";
+    li.appendChild(editBtn);
+    editBtn.addEventListener("click", () => {
+        modoEdicion = true;
+        document.querySelector("#submitBtn").textContent = "Editar comic";
+        //Pintamos los datos del comic existente en el formulario
+        document.querySelector("#titulo").value = comic.titulo;
+        document.querySelector("#editorial").value = comic.editorial;
+        document.querySelector("#portada").value = comic.cover;
+        document.querySelector("#año").value = comic.year;
+        document.querySelector("#id").value = comic.id;
+    });
 
-    //Añadimos el botón y la función de borrar tanto de la web como de la API
+  //Añadimos el botón y la función de borrar tanto de la web como de la API
     const deleteBtn = document.createElement("button");
+    deleteBtn.id ="deleteBtn";
     deleteBtn.textContent = "Borrar comic";
     li.appendChild(deleteBtn);
     deleteBtn.addEventListener("click", async () => {
@@ -23,20 +41,6 @@ const crearComic = (comic) => {
         });
 
         consultarComics();
-    });
-    //Creamos boton de editar
-    const editBtn = document.createElement("button");
-    editBtn.textContent = "Editar comic";
-    li.appendChild(editBtn);
-    editBtn.addEventListener("click", () => {
-        modoEdicion = true;
-        document.querySelector("#submitBtn").textContent = "Editar comic";
-        //Pintamos los datos del comic existente en el formulario
-        document.querySelector("#titulo").value = comic.titulo;
-        document.querySelector("#editoriala").value = comic.editorial;
-        document.querySelector("#portada").value = comic.cover;
-        document.querySelector("#año").value = comic.year;
-        document.querySelector("#id").value = comic.id;
     });
     return li;
 }
@@ -62,7 +66,7 @@ formulario.addEventListener("submit", async (ev) => {
         const crearComic = {
             "id": crypto.randomUUID(),
             "titulo": document.querySelector("#titulo").value,
-            "editorial": document.querySelector("#editoriala").value,
+            "editorial": document.querySelector("#editorial").value,
             "year": document.querySelector("#año").value,
             "cover": document.querySelector("#portada").value,
         };
@@ -79,7 +83,7 @@ formulario.addEventListener("submit", async (ev) => {
         const crearComic = {
             "id": document.querySelector("#id").value,
             "titulo": document.querySelector("#titulo").value,
-            "editorial": document.querySelector("#editoriala").value,
+            "editorial": document.querySelector("#editorial").value,
             "year": document.querySelector("#año").value,
             "cover": document.querySelector("#portada").value,
         };

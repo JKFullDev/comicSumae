@@ -5,6 +5,316 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-img {
-    max-width: 200px;
+body {
+    background: #ffffff;
+background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(133, 180, 255, 1) 100%);
 }
+
+
+nav {
+    padding-left: 100px;
+    padding-right: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-image: url("https://img.freepik.com/premium-vector/comic-style-background-design-element-poster-card-banner-comic-book-flyer_142438-685.jpg");
+    background-size: contain;
+}
+
+
+nav img {
+    width: 200px;
+    height: fit-content;
+}
+
+nav button {
+    padding: 10px;
+    width: 190px;
+    height: 40px;
+}
+
+/* Home */
+
+#buscar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#buscar input {
+    width: 500px;
+    height: 50px;
+    padding: 10px;
+    border-radius: 20px;
+    margin-top: 100px
+}
+
+video {
+    margin-top: 100px;
+    margin-left: 10%;
+    width: 80%;
+    border: 3px solid wheat;
+    margin-bottom: 100px;
+}
+
+#masGustados {
+    margin-top: 100px
+}
+
+#masGustados ul {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    list-style: none;
+    align-self: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#masGustados img {
+    width: 200px;
+}
+
+#cuadroBusqueda {
+    width: 60%;
+    margin-top: 60px;
+    margin-left: 20%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.425);
+    border: 2px solid black;
+    border-radius: 20px;
+}
+
+#barraBusqueda {
+    text-align: center;
+    width: 100%;
+}
+
+#barraBusqueda button {
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    font-size: x-large;
+}
+
+#cuadroBusqueda ul {
+    list-style: none;
+    text-align: center;
+}
+
+#cuadroBusqueda li {
+    margin-top: 30px;
+}
+
+#cuadroBusqueda input {
+    width: 80%;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+#cuadroBusqueda img {
+    width: 100px;
+}
+
+
+/* AREA PERSONAL */
+#mainPersonal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.apartadosPersonales {
+    width: 40%;
+    height: 300px;
+    cursor: pointer;
+}
+
+.apartadosPersonales:hover {
+    background-color:rgb(0, 102, 255);
+    color: whitesmoke;
+    font-size: large;
+     transform: scale(1.05);
+    
+}
+
+
+/*MI BIBLIOTECA*/
+/* Formulario para añadir comic */
+
+.encabezado {
+    text-align: center;
+    margin: 20px;
+}
+
+#form-comic {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    
+}
+
+#form-comic input, button{
+    padding: 10px;
+    border: 1px solid rgb(0, 102, 255);
+    border-radius: 20px;
+}
+
+#form-comic button:hover {
+    background-color:rgb(0, 102, 255);
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+#comics-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    list-style: none;
+    text-align: center;
+    padding: 50px;
+}
+
+#comic-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    padding: 15px;
+    gap: 20px;
+    border-style:double;
+    background: #ffffff;
+    background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(255, 246, 168, 1) 100%);
+}
+
+#comic-card:hover {
+    cursor: pointer;
+     transform: scale(1.05);
+}
+
+#comic-card button {
+    width: 100px;
+    padding: 5px 0px;
+    border: 1px solid black;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+#comic-card img {
+    width: 150px;
+    height: 220px;
+    border: 1px solid black;
+}
+
+#editBtn:hover{
+    background-color:rgb(0, 102, 255);
+    color: whitesmoke;
+}
+
+ #deleteBtn:hover {
+    background-color:rgb(255, 0, 0);
+    color: whitesmoke;
+ }
+
+
+ /* ESTANTERIAS */
+#mainEstanterias{
+    padding: 70px;
+}
+
+#estanterias {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 100px;
+}
+ 
+#estanterias div {
+    background-color: aliceblue;
+    padding: 20px;
+    width: 500px;
+    border: 2px solid blue;
+    border-radius: 20px;
+}
+
+#estanterias div:hover {
+     transform: scale(1.05);
+}
+
+#estanterias img {
+    margin-top: 20px;
+    width: 300px;
+}
+
+
+/* BIBLIOTECA USUARIOS PUBLICOS */
+#other-user-container{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+            list-style: none;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .comic-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 300px;
+            padding: 15px;
+            gap: 20px;
+            border-style: double;
+            background: #ffffff;
+            background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(255, 246, 168, 1) 100%);
+        }
+
+        .comic-card:hover {
+            cursor: pointer;
+            transform: scale(1.05);
+        }
+
+        .comic-card button {
+            width: 100px;
+            padding: 5px 0px;
+            border: 1px solid black;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+
+        .comic-card img {
+            width: 150px;
+            height: 220px;
+            border: 1px solid black;
+        }
+
+        .comic-card h3 {
+            font-size: 1.2em;
+            margin: 0;
+        }
+
+        .comic-card p {
+            margin: 5px 0;
+            color: #333;}
